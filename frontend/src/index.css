@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FAF5EB;
+  --bg-card: #FFFDF8;
+  --bg-card-alt: #F5EFE0;
+  --border-color: #E5D9C5;
+  --border-soft: #D4C5AD;
+  --text-heading: #2D1F18;
+  --text-body: #5C4435;
+  --text-soft: #8A7667;
+  --color-terracotta: #A84323;
+  --color-sage: #4E6E36;
+  --color-amber: #C8822A;
+  --shadow-warm: 0 12px 24px -10px rgba(92, 68, 53, 0.16);
+}
+
+html {
+  background: var(--bg-primary);
+  color: var(--text-heading);
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FAF5EB;
+  background-image:
+    radial-gradient(at 15% 15%, rgba(220, 115, 86, 0.05) 0px, transparent 50%),
+    radial-gradient(at 85% 85%, rgba(78, 110, 54, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #2D1F18;
+  min-height: 100vh;
+}
+
+/* Warm Editorial Heading Style */
+h1, h2, h3, .font-editorial {
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.015em;
+  color: #2D1F18;
+}
+
+/* Cozy Parchment Card Panels */
+.border-cozy {
+  border-color: var(--border-color);
+}
+
+.card-cozy {
+  background: #FFFDF8;
+  border: 1.5px solid #E5D9C5;
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-warm);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cozy-card {
+  background: #FFFDF8;
+  border: 1.5px solid #E5D9C5;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(92, 68, 53, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cozy-card:hover {
+  border-color: #D4C5AD;
+  box-shadow: 0 10px 25px -4px rgba(92, 68, 53, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.cozy-card-interactive {
+  background: #FFFDF8;
+  border: 1.5px solid #E5D9C5;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 15px rgba(92, 68, 53, 0.05);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cozy-card-interactive:hover {
+  background: #FFFBF2;
+  border-color: #A84323;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(168, 67, 35, 0.12);
+}
+
+/* Terracotta Action Button */
+.btn-terracotta {
+  background-color: #A84323;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(168, 67, 35, 0.25);
+}
+
+.btn-terracotta:hover {
+  background-color: #94381C;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(168, 67, 35, 0.35);
+}
+
+.btn-terracotta:active {
+  transform: translateY(0);
+}
+
+/* Glass panel fallback for compatibility */
+.glass-panel {
+  background: rgba(255, 253, 248, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid #E5D9C5;
+  box-shadow: 0 12px 40px -10px rgba(92, 68, 53, 0.15);
+}
+
+/* Custom Warm Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4ECE0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DACBBB;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BFAEA0;
+}
+
+/* Freshness Indicators */
+.freshness-glow-green {
+  background: #4E6E36;
+  color: #FFFFFF;
+}
+
+.freshness-glow-amber {
+  background: #C8822A;
+  color: #FFFFFF;
+}
+
+.freshness-glow-red {
+  background: #A84323;
+  color: #FFFFFF;
+}

@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: kitchen_os_backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://kitchen_user:kitchen_pass@db:5432/kitchen_os
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./backend:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: ./frontend
+    container_name: kitchen_os_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+  db:
+    image: postgres:15-alpine
+    container_name: kitchen_os_db
+    environment:
+      POSTGRES_USER: kitchen_user
+      POSTGRES_PASSWORD: kitchen_pass
+      POSTGRES_DB: kitchen_os
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: kitchen_os_redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
