@@ -240,7 +240,7 @@ export default function GroceryAgent({ onPantryRestocked }) {
                       {item.category}
                     </span>
                     <span className="text-[10px] font-mono font-bold text-[#4E6E36]">
-                      ${(item.estimated_price_usd || 3.5).toFixed(2)}
+                      ₹{(item.estimated_price_usd || 3.5).toFixed(2)}
                     </span>
                   </div>
 
@@ -322,7 +322,7 @@ export default function GroceryAgent({ onPantryRestocked }) {
             <span className="text-xs text-[#8A7667]">({groceryItems.length} items)</span>
           </div>
           <div className="text-xs text-[#5C4435]">
-            Est. Total: <span className="font-mono font-bold text-[#4E6E36]">${estimatedTotal}</span>
+            Est. Total: <span className="font-mono font-bold text-[#4E6E36]">₹{estimatedTotal}</span>
           </div>
         </div>
 
@@ -384,7 +384,7 @@ export default function GroceryAgent({ onPantryRestocked }) {
                       <ExternalLink className="w-3.5 h-3.5" />
                     </button>
                     <span className="font-mono text-xs text-[#5C4435]">
-                      ${(item.estimated_price_usd || 2.5).toFixed(2)}
+                      ₹{(item.estimated_price_usd || 2.5).toFixed(2)}
                     </span>
                     <button
                       onClick={() => handleDeleteItem(item.id)}
@@ -457,7 +457,7 @@ export default function GroceryAgent({ onPantryRestocked }) {
               </div>
 
               <div>
-                <label className="mb-1 block text-xs font-semibold text-[#5C4435]">Est. Price ($)</label>
+                <label className="mb-1 block text-xs font-semibold text-[#5C4435]">Est. Price (₹)</label>
                 <input
                   type="number"
                   step="0.10"

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { 
-  Leaf, 
-  ChefHat, 
-  Activity, 
-  Recycle, 
-  CalendarDays, 
-  ShoppingCart, 
-  BarChart3, 
-  Camera, 
-  Plus, 
+import {
+  Leaf,
+  ChefHat,
+  Activity,
+  Recycle,
+  CalendarDays,
+  ShoppingCart,
+  BarChart3,
+  Camera,
+  Plus,
   Sparkles,
   User,
   LogOut,
@@ -46,18 +46,18 @@ export default function Navbar({ activeTab, setActiveTab, onOpenScan, onOpenAdd,
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[#E6DBC8] bg-[#FAF5EB]/95 backdrop-blur-md transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Top Navbar Row */}
         <div className="flex items-center justify-between h-20">
-          
+
           {/* Brand Logo matching reference: Cooking Pot Icon + KitchenOS */}
-          <div 
-            className="flex items-center space-x-3 cursor-pointer group" 
+          <div
+            className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => setActiveTab('home')}
           >
             {/* Hand-drawn cooking pot icon */}
             <div className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-[#A84323] text-white shadow-md shadow-[#A84323]/20 group-hover:scale-105 transition-transform">
-              <span className="text-xl">🍲</span>
+              <span className="text-xl">kOs</span>
             </div>
             <div>
               <div className="flex items-center space-x-2">
@@ -65,7 +65,7 @@ export default function Navbar({ activeTab, setActiveTab, onOpenScan, onOpenAdd,
                   Kitchen<span className="text-[#A84323] font-serif font-black">OS</span>
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-[#A84323]/10 text-[#A84323] border border-[#A84323]/20">
-                  Cozy AI
+                  AI
                 </span>
               </div>
               <p className="text-[11px] text-[#6B5344] font-medium">Your Kitchen, Smarter.</p>
@@ -80,11 +80,10 @@ export default function Navbar({ activeTab, setActiveTab, onOpenScan, onOpenAdd,
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`px-3 py-1.5 rounded-xl text-xs lg:text-sm font-semibold transition-all ${
-                    isActive
-                      ? 'text-[#A84323] bg-[#A84323]/10 border-b-2 border-[#A84323]'
-                      : 'text-[#5C4435] hover:text-[#2D1F18] hover:bg-[#F4ECE0]/60'
-                  }`}
+                  className={`px-3 py-1.5 rounded-xl text-xs lg:text-sm font-semibold transition-all ${isActive
+                    ? 'text-[#A84323] bg-[#A84323]/10 border-b-2 border-[#A84323]'
+                    : 'text-[#5C4435] hover:text-[#2D1F18] hover:bg-[#F4ECE0]/60'
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -94,7 +93,7 @@ export default function Navbar({ activeTab, setActiveTab, onOpenScan, onOpenAdd,
 
           {/* Right Action Buttons */}
           <div className="flex items-center space-x-2.5 sm:space-x-3">
-            
+
             {/* Voice Inventory Logging Button (ElevenLabs) */}
             <button
               onClick={onOpenVoice}
@@ -179,11 +178,10 @@ export default function Navbar({ activeTab, setActiveTab, onOpenScan, onOpenAdd,
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
-                  isActive
-                    ? 'text-white bg-[#A84323] shadow-xs'
-                    : 'text-[#6B5344] bg-[#F4ECE0]/50 hover:bg-[#F4ECE0]'
-                }`}
+                className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap transition-all ${isActive
+                  ? 'text-white bg-[#A84323] shadow-xs'
+                  : 'text-[#6B5344] bg-[#F4ECE0]/50 hover:bg-[#F4ECE0]'
+                  }`}
               >
                 {item.label}
               </button>

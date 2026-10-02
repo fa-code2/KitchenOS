@@ -1,16 +1,16 @@
 import React from 'react';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  BookOpen, 
-  Package, 
-  CalendarDays, 
-  Lightbulb, 
-  Camera, 
-  ChefHat, 
-  Activity, 
-  Recycle, 
-  ShieldCheck, 
+import {
+  Sparkles,
+  ArrowRight,
+  BookOpen,
+  Package,
+  CalendarDays,
+  Lightbulb,
+  Camera,
+  ChefHat,
+  Activity,
+  Recycle,
+  ShieldCheck,
   Leaf,
   Clock,
   HeartHandshake,
@@ -25,14 +25,14 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
 
   return (
     <div className="space-y-16 pb-12">
-      
+
       {/* 1. HERO SECTION (Faithful to Reference Image) */}
       <section className="relative overflow-hidden rounded-3xl border border-[#E6DBC8] bg-[#FFFDF8] shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-          
+
           {/* Left Hero Content */}
           <div className="lg:col-span-5 p-8 sm:p-12 lg:p-14 space-y-6 z-10">
-            
+
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black leading-[1.08] text-[#2D1F18] font-serif">
                 Your Kitchen, <br />
@@ -57,21 +57,21 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
 
             {/* 3 Hand-Drawn Badge Pills */}
             <div className="pt-4 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-bold text-[#5C4435]">
-              <div 
+              <div
                 onClick={() => onNavigate('recipes')}
                 className="cursor-pointer flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-[#FAF5EB] border border-[#E6DBC8] hover:border-[#A84323] hover:bg-[#FFFBF5] transition-all shadow-2xs"
               >
                 <BookOpen className="w-4 h-4 text-[#A84323]" />
                 <span>Curated Recipes</span>
               </div>
-              <div 
+              <div
                 onClick={() => onNavigate('pantry')}
                 className="cursor-pointer flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-[#FAF5EB] border border-[#E6DBC8] hover:border-[#A84323] hover:bg-[#FFFBF5] transition-all shadow-2xs"
               >
                 <Package className="w-4 h-4 text-[#4E6E36]" />
                 <span>Smart Pantry</span>
               </div>
-              <div 
+              <div
                 onClick={() => onNavigate('meal-planner')}
                 className="cursor-pointer flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-[#FAF5EB] border border-[#E6DBC8] hover:border-[#A84323] hover:bg-[#FFFBF5] transition-all shadow-2xs"
               >
@@ -85,7 +85,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
           {/* Right Hero Cozy Watercolor Anime Artwork */}
           <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[500px] w-full overflow-hidden bg-[#F4ECE0] border-t lg:border-t-0 lg:border-l border-[#E6DBC8]">
             {/* Rich Cozy Anime Watercolor Kitchen Illustration */}
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1400&q=80')`,
@@ -95,7 +95,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
             {/* Warm Sunlight & Vignette Overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#FAF5EB]/50 via-transparent to-[#A84323]/10 pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2D1F18]/40 via-transparent to-transparent pointer-events-none" />
-            
+
             {/* Floating Live AI Badge */}
             <div className="absolute top-4 right-4 sm:top-6 sm:right-6 p-3 sm:p-4 rounded-2xl bg-[#FFFDF8]/90 backdrop-blur-md border border-[#E6DBC8] shadow-lg flex items-center space-x-3">
               <div className="w-9 h-9 rounded-xl bg-[#4E6E36]/15 text-[#4E6E36] flex items-center justify-center font-bold">
@@ -113,7 +113,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
                 <Camera className="w-4 h-4" />
               </div>
               <p className="text-xs font-semibold text-[#2D1F18]">
-                Instant YOLOv8 visual food detection with freshness predictions
+                Instant visual food detection with freshness assessment.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
 
       {/* 2. SUB-HERO FEATURE CARDS (Exact match: "Everything You Need in Your Kitchen") */}
       <section className="space-y-6">
-        
+
         <div className="text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl font-bold font-serif text-[#2D1F18] flex items-center justify-center gap-2">
             <span className="text-[#4E6E36]">🌿</span>
@@ -133,9 +133,9 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          
+
           {/* Card 1: Delicious Recipes */}
-          <div 
+          <div
             onClick={() => onNavigate('recipes')}
             className="cursor-pointer group p-6 rounded-2xl bg-[#FFFDF8] border-2 border-[#E6DBC8] hover:border-[#A84323] hover:bg-[#FFFBF5] transition-all flex flex-col justify-between shadow-2xs hover:shadow-md"
           >
@@ -159,7 +159,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
           </div>
 
           {/* Card 2: Pantry Tracker */}
-          <div 
+          <div
             onClick={() => onNavigate('pantry')}
             className="cursor-pointer group p-6 rounded-2xl bg-[#FFFDF8] border-2 border-[#E6DBC8] hover:border-[#4E6E36] hover:bg-[#FFFBF5] transition-all flex flex-col justify-between shadow-2xs hover:shadow-md"
           >
@@ -183,7 +183,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
           </div>
 
           {/* Card 3: Meal Planner */}
-          <div 
+          <div
             onClick={() => onNavigate('meal-planner')}
             className="cursor-pointer group p-6 rounded-2xl bg-[#FFFDF8] border-2 border-[#E6DBC8] hover:border-[#C8822A] hover:bg-[#FFFBF5] transition-all flex flex-col justify-between shadow-2xs hover:shadow-md"
           >
@@ -207,7 +207,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
           </div>
 
           {/* Card 4: Kitchen Tips & Second Life */}
-          <div 
+          <div
             onClick={() => onNavigate('second-life')}
             className="cursor-pointer group p-6 rounded-2xl bg-[#FFFDF8] border-2 border-[#E6DBC8] hover:border-[#A84323] hover:bg-[#FFFBF5] transition-all flex flex-col justify-between shadow-2xs hover:shadow-md"
           >
@@ -243,10 +243,10 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
 
       {/* 3. LIVE INTERACTIVE INTELLIGENCE SHOWCASE */}
       <section className="space-y-6 pt-4">
-        
+
         <div className="text-center max-w-xl mx-auto space-y-2">
           <span className="text-[11px] font-black uppercase tracking-widest text-[#A84323] bg-[#A84323]/10 px-3 py-1 rounded-full border border-[#A84323]/20">
-            Powered by Computer Vision & ML
+            Powered by Computer Vision
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold font-serif text-[#2D1F18]">
             Mindful Cooking, Powered by Gentle Technology
@@ -257,13 +257,13 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          {/* Feature 1: YOLO Vision */}
+
+          {/* Feature 1: AI Vision */}
           <div className="p-6 rounded-2xl bg-[#FFFDF8] border border-[#E6DBC8] space-y-4 hover:border-[#A84323] transition-all">
             <div className="w-10 h-10 rounded-xl bg-[#A84323]/10 text-[#A84323] flex items-center justify-center font-bold">
               <Camera className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-[#2D1F18] font-serif">YOLOv8 Visual Food Scanner</h3>
+            <h3 className="text-base font-bold text-[#2D1F18] font-serif"> AI Powered Scanner</h3>
             <p className="text-xs text-[#5C4435] leading-relaxed">
               Snap a picture of your grocery haul or fruit bowl. Kitchen OS automatically detects produce, categorizes items, and calculates days before expiry.
             </p>
@@ -294,7 +294,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
             </button>
           </div>
 
-          {/* Feature 3: Random Forest Freshness ML */}
+          {/* Feature 3: Random Forest Freshness  */}
           <div className="p-6 rounded-2xl bg-[#FFFDF8] border border-[#E6DBC8] space-y-4 hover:border-[#C8822A] transition-all">
             <div className="w-10 h-10 rounded-xl bg-[#C8822A]/10 text-[#C8822A] flex items-center justify-center font-bold">
               <Activity className="w-5 h-5" />
@@ -316,7 +316,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
 
       </section>
 
-      {/* 4. COZY INVITATION BANNER */}
+      {/* 4. INVITATION BANNER */}
       <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#FAF5EB] via-[#FFFDF8] to-[#F4ECE0] border-2 border-[#E6DBC8] text-center space-y-5">
         <h2 className="text-2xl sm:text-3xl font-bold font-serif text-[#2D1F18] max-w-xl mx-auto">
           Ready to bring calm, creativity, and sustainability into your cooking?
@@ -337,7 +337,7 @@ export default function LandingPage({ onNavigate, onOpenScan, onOpenAuth, summar
             onClick={onOpenScan}
             className="px-5 py-3 rounded-full bg-[#FFFDF8] border border-[#E6DBC8] hover:border-[#A84323] text-[#2D1F18] font-bold text-sm transition-all"
           >
-            📸 Try YOLO Camera Scan
+            Try Scan
           </button>
         </div>
       </section>

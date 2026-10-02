@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  X, 
-  Lock, 
-  Mail, 
-  User as UserIcon, 
-  ArrowRight, 
-  Sparkles, 
-  AlertCircle, 
-  Loader2, 
+import {
+  X,
+  Lock,
+  Mail,
+  User as UserIcon,
+  ArrowRight,
+  Sparkles,
+  AlertCircle,
+  Loader2,
   CheckCircle2,
   ShieldCheck,
   Zap
@@ -89,7 +89,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative w-full max-w-md bg-[#FFFDF8] rounded-3xl border-2 border-[#E6DBC8] shadow-2xl p-6 sm:p-8">
-        
+
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -107,8 +107,8 @@ export default function AuthModal({ isOpen, onClose, onSuccess }) {
             {isRegister ? 'Create your Kitchen OS Account' : 'Welcome to Kitchen OS'}
           </h3>
           <p className="text-xs text-[#5C4435] mt-1 font-medium">
-            {isRegister 
-              ? 'Save your smart pantry, custom recipes, and waste analytics' 
+            {isRegister
+              ? 'Save your smart pantry, custom recipes, and waste analytics'
               : 'Sign in to access your intelligent pantry and food forecasts'}
           </p>
         </div>
@@ -118,22 +118,20 @@ export default function AuthModal({ isOpen, onClose, onSuccess }) {
           <button
             type="button"
             onClick={() => { setIsRegister(false); setError(null); }}
-            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all ${
-              !isRegister 
-                ? 'bg-[#A84323] text-white shadow-md shadow-[#A84323]/20' 
+            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all ${!isRegister
+                ? 'bg-[#A84323] text-white shadow-md shadow-[#A84323]/20'
                 : 'text-[#6B5344] hover:text-[#2D1F18]'
-            }`}
+              }`}
           >
             Sign In
           </button>
           <button
             type="button"
             onClick={() => { setIsRegister(true); setError(null); }}
-            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all ${
-              isRegister 
-                ? 'bg-[#A84323] text-white shadow-md shadow-[#A84323]/20' 
+            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all ${isRegister
+                ? 'bg-[#A84323] text-white shadow-md shadow-[#A84323]/20'
                 : 'text-[#6B5344] hover:text-[#2D1F18]'
-            }`}
+              }`}
           >
             Create Account
           </button>
@@ -141,7 +139,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }) {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          
+
           {isRegister && (
             <div>
               <label className="block text-xs font-bold text-[#2D1F18] font-serif mb-1.5">
@@ -262,7 +260,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }) {
             className="w-full py-2.5 px-3 rounded-full bg-[#FAF5EB] hover:bg-[#F4ECE0] border border-[#E6DBC8] text-[#2D1F18] hover:text-[#A84323] text-xs font-bold flex items-center justify-center space-x-2 transition-all group"
           >
             <Zap className="w-4 h-4 text-[#A84323] group-hover:scale-110 transition-transform" />
-            <span>⚡ Instant Demo Login (1-Click)</span>
+            <span> Instant Demo Login (1-Click)</span>
           </button>
           <p className="text-[10px] text-center text-[#8A7667] mt-2 font-medium">
             No signup needed — test with preloaded pantry & recipe data

@@ -130,7 +130,7 @@ function MainApp() {
 
   return (
     <div className="min-h-screen bg-[#FAF5EB] flex flex-col justify-between text-[#2D1F18]">
-      
+
       {/* Navigation Header */}
       <div>
         <Navbar
@@ -145,7 +145,7 @@ function MainApp() {
 
         {/* Main Content Area */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
-          
+
           {/* Landing Page or Dashboard (Home) */}
           {shouldShowLanding && !isAuthenticated && (
             <LandingPage
@@ -232,13 +232,13 @@ function MainApp() {
       <footer className="border-t border-[#E6DBC8] bg-[#FFFDF8] py-6 px-4 text-center text-xs text-[#8A7667]">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center space-x-2">
-            <span className="text-base">🍲</span>
+            <span className="text-base">kOs</span>
             <span className="font-bold text-[#2D1F18] font-serif">Kitchen OS</span>
             <span>•</span>
             <span className="italic">A Better Kitchen, A Better You.</span>
           </div>
           <div className="flex items-center space-x-4 font-semibold text-[#5C4435]">
-            <span>Gemini Vision AI</span>
+            <span>Vision AI</span>
             <span>•</span>
             <span>Deterministic Spoilage</span>
             <span>•</span>

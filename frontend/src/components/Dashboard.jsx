@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp, 
-  Leaf, 
-  DollarSign, 
+import {
+  TrendingUp,
+  Leaf,
+  IndianRupee,
   AlertTriangle,
   History,
   Scan,
@@ -13,17 +13,17 @@ import {
 } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, Tooltip } from 'recharts';
 
-export default function Dashboard({ 
-  pantryItems, 
-  analyticsSummary, 
+export default function Dashboard({
+  pantryItems,
+  analyticsSummary,
   onNavigate,
   onOpenScan,
   onOpenAdd,
-  onOpenVoice 
+  onOpenVoice
 }) {
   // Extract data from props
   const recentActivity = analyticsSummary?.recent_activity || [];
-  
+
   // Find items expiring soon (e.g., within 3 days or lower freshness score)
   // Assuming pantryItems have freshness_score or expiry_date
   // We'll just sort by freshness score ascending if available
@@ -53,9 +53,9 @@ export default function Dashboard({
           </p>
         </div>
         <div className="flex">
-          <img 
-            src="/dashboard_graphic.jpg" 
-            alt="Dashboard Graphic" 
+          <img
+            src="/dashboard_graphic.jpg"
+            alt="Dashboard Graphic"
             className="h-24 md:h-32 w-auto object-cover rounded-2xl shadow-sm border border-[#E5D9C5]"
           />
         </div>
@@ -79,11 +79,11 @@ export default function Dashboard({
           <div className="mb-2 flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-[#8A7667]">Money Saved</span>
             <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#4E6E36]/10 text-[#4E6E36]">
-              <DollarSign className="w-4 h-4" />
+              <IndianRupee className="w-4 h-4" />
             </div>
           </div>
           <div className="text-2xl font-extrabold text-[#2D1F18]">
-            ${analyticsSummary?.total_money_saved_usd || '0.00'}
+            ₹{analyticsSummary?.total_money_saved_usd || '0.00'}
           </div>
         </div>
 
@@ -130,7 +130,7 @@ export default function Dashboard({
                   View Radar <ArrowRight className="w-3 h-3" />
                 </button>
               </div>
-              
+
               {expiringItems.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {expiringItems.map(item => (
@@ -194,7 +194,7 @@ export default function Dashboard({
               Recent Activity
             </h3>
           </div>
-          
+
           <div className="flex-1 overflow-y-auto pr-2">
             {recentActivity.length > 0 ? (
               <div className="space-y-4">

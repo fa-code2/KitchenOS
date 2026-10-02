@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   Leaf,
-  DollarSign,
+  IndianRupee,
   Award,
   TrendingUp,
   Activity,
@@ -63,7 +63,7 @@ export default function WasteAnalytics() {
               Macro & Waste <span className="text-[#4E6E36]">Analytics</span>
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-[#5C4435]">
-              Every ingredient saved directly reduces methane emissions and household grocery expenses. Track your circular kitchen performance with real-time ML metrics.
+              Every ingredient saved directly reduces methane emissions and household grocery expenses. Track your circular kitchen performance with metrics.
             </p>
           </div>
 
@@ -98,15 +98,15 @@ export default function WasteAnalytics() {
           <div className="mb-2 flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-[#8A7667]">Grocery Money Saved</span>
             <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#4E6E36]/10 text-[#4E6E36]">
-              <DollarSign className="w-4 h-4" />
+              <IndianRupee className="w-4 h-4" />
             </div>
           </div>
           <div className="text-2xl font-extrabold text-[#2D1F18]">
-            ${summary?.total_money_saved_usd || 112.5}
+            ₹{summary?.total_money_saved_usd || 112.5}
           </div>
           <div className="mt-1 flex items-center gap-1 text-[11px] font-medium text-[#4E6E36]">
             <TrendingUp className="w-3 h-3" />
-            <span>Est. $450/year saved</span>
+            <span>Est. ₹450/year saved</span>
           </div>
         </div>
 
@@ -225,7 +225,7 @@ export default function WasteAnalytics() {
 
               <div className="text-right text-xs">
                 <div className="font-bold text-[#4E6E36]">+{act.waste_prevented_kg} kg saved</div>
-                <div className="text-[11px] text-[#8A7667]">+${act.money_saved_usd}</div>
+                <div className="text-[11px] text-[#8A7667]">+₹{act.money_saved_usd}</div>
               </div>
             </div>
           ))}

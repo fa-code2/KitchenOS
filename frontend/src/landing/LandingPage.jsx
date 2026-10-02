@@ -91,7 +91,7 @@ export default function LandingPage({ onNavigate, onOpenScan, summary }) {
                 <Camera className="w-4 h-4" />
               </div>
               <p className="text-xs font-semibold text-[#2D1F18]">
-                Instant YOLOv8 visual food detection with freshness predictions
+                Instant visual food detection with freshness assessment.
               </p>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function LandingPage({ onNavigate, onOpenScan, summary }) {
       <section className="space-y-6 pt-4">
         <div className="text-center max-w-xl mx-auto space-y-2">
           <span className="text-[11px] font-black uppercase tracking-widest text-[#A84323] bg-[#A84323]/10 px-3 py-1 rounded-full border border-[#A84323]/20">
-            Powered by Computer Vision & ML
+            Powered by Computer Vision
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold font-serif text-[#2D1F18]">
             Mindful Cooking, Powered by Gentle Technology
@@ -226,7 +226,7 @@ export default function LandingPage({ onNavigate, onOpenScan, summary }) {
             <div className="w-10 h-10 rounded-xl bg-[#A84323]/10 text-[#A84323] flex items-center justify-center font-bold">
               <Camera className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-[#2D1F18] font-serif">YOLOv8 Visual Food Scanner</h3>
+            <h3 className="text-base font-bold text-[#2D1F18] font-serif">AI Visual Food Scanner</h3>
             <p className="text-xs text-[#5C4435] leading-relaxed">
               Snap a picture of your grocery haul or fruit bowl. Kitchen OS automatically detects produce, categorizes items, and calculates days before expiry.
             </p>
@@ -260,9 +260,9 @@ export default function LandingPage({ onNavigate, onOpenScan, summary }) {
             <div className="w-10 h-10 rounded-xl bg-[#C8822A]/10 text-[#C8822A] flex items-center justify-center font-bold">
               <Activity className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-[#2D1F18] font-serif">ML Freshness Predictor</h3>
+            <h3 className="text-base font-bold text-[#2D1F18] font-serif">Freshness indicator</h3>
             <p className="text-xs text-[#5C4435] leading-relaxed">
-              A trained Random Forest regressor continuously estimates shelf-life and alerts you when ingredients enter the critical freshness window.
+              Continuously estimates shelf-life and alerts you when ingredients enter the critical freshness window.
             </p>
             <button
               onClick={() => onNavigate('radar')}
@@ -295,7 +295,7 @@ export default function LandingPage({ onNavigate, onOpenScan, summary }) {
             onClick={onOpenScan}
             className="px-5 py-3 rounded-full bg-[#FFFDF8] border border-[#E6DBC8] hover:border-[#A84323] text-[#2D1F18] font-bold text-sm transition-all"
           >
-            📸 Try YOLO Camera Scan
+            Try Scan
           </button>
         </div>
       </section>

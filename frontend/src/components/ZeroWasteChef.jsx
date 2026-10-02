@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ChefHat, 
-  Sparkles, 
-  Clock, 
-  CheckCircle2, 
-  AlertCircle, 
-  ChevronRight, 
-  RotateCcw, 
-  UtensilsCrossed, 
-  Check, 
+import {
+  ChefHat,
+  Sparkles,
+  Clock,
+  CheckCircle2,
+  AlertCircle,
+  ChevronRight,
+  RotateCcw,
+  UtensilsCrossed,
+  Check,
   Award,
   Lightbulb,
   BookOpen
@@ -62,7 +62,7 @@ export default function ZeroWasteChef({ onPantryUpdated, initialItem }) {
         .map(i => i.name);
 
       const res = await api.cookRecipe(activeCookRecipe.title, ingredientsToDeduct);
-      
+
       // Trigger festive zero-waste confetti
       confetti({
         particleCount: 100,
@@ -73,7 +73,7 @@ export default function ZeroWasteChef({ onPantryUpdated, initialItem }) {
 
       setCookingSuccessMessage(res.message);
       if (onPantryUpdated) onPantryUpdated();
-      
+
       setTimeout(() => {
         setActiveCookRecipe(null);
         fetchRecipes();
@@ -86,7 +86,7 @@ export default function ZeroWasteChef({ onPantryUpdated, initialItem }) {
 
   return (
     <div className="space-y-6">
-      
+
       {/* Header Banner */}
       <div className="relative overflow-hidden rounded-3xl bg-[#FFFDF8] p-6 sm:p-8 border-2 border-[#E6DBC8] shadow-2xs">
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -99,7 +99,7 @@ export default function ZeroWasteChef({ onPantryUpdated, initialItem }) {
               Zero-Waste <span className="text-[#A84323] font-serif">Chef</span>
             </h2>
             <p className="text-sm text-[#5C4435] leading-relaxed font-medium">
-              Our culinary engine inspects your pantry's ML freshness scores and generates handcrafted recipes designed specifically to rescue expiring ingredients before they spoil.
+              Our culinary engine inspects your pantry's freshness scores and generates handcrafted recipes designed specifically to rescue expiring ingredients before they spoil.
             </p>
           </div>
 
@@ -258,7 +258,7 @@ export default function ZeroWasteChef({ onPantryUpdated, initialItem }) {
       {activeCookRecipe && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#FFFDF8] rounded-3xl border-2 border-[#E6DBC8] p-6 sm:p-8 shadow-2xl">
-            
+
             {/* Modal Header */}
             <div className="flex items-center justify-between pb-4 border-b border-[#E6DBC8]">
               <div className="flex items-center space-x-3">
@@ -293,7 +293,7 @@ export default function ZeroWasteChef({ onPantryUpdated, initialItem }) {
             ) : (
               /* Steps walkthrough */
               <div className="mt-6 space-y-6">
-                
+
                 {/* Ingredients Checklist */}
                 <div className="p-4 rounded-2xl bg-[#FAF5EB] border border-[#E6DBC8]">
                   <h4 className="text-xs font-bold text-[#2D1F18] font-serif uppercase tracking-wider mb-2">Ingredients Needed:</h4>
